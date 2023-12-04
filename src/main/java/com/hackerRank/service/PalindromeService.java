@@ -7,18 +7,18 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class PalindromeService {
 
-    private final String textToValidate = "anita lava la tina";
+    private final String TEXT_TO_VALIDATE = "anita lava la tina";
 
     public void verifyPalindrome() {
-        log.info("This challenge verify if a text is palindrome \n\ntextToValidate: " + textToValidate);
-        if(textToValidate == null || textToValidate.isEmpty()) {
+        log.info("This challenge verify if a text is palindrome \n\ntextToValidate: " + TEXT_TO_VALIDATE);
+        if(TEXT_TO_VALIDATE == null || TEXT_TO_VALIDATE.isEmpty()) {
             throw new IllegalArgumentException("The text cannot be null or empty to validate if it is a palindrome.");
         }
-        if (textToValidate.matches("^[a-zA-Z]+$"))
+        if (TEXT_TO_VALIDATE.matches("^[a-zA-Z]+$"))
             throw new IllegalArgumentException("Numbers or special characters not allowed.");
 
 
-        String text = textToValidate.trim().replaceAll("\\s+", "").toLowerCase();
+        String text = TEXT_TO_VALIDATE.trim().replaceAll("\\s+", "").toLowerCase();
         log.info("Text without spaces: " + text);
 
         boolean isPalindrome = true;
@@ -30,9 +30,9 @@ public class PalindromeService {
         }
 
         if(isPalindrome)
-            System.out.println("The word " + textToValidate + " is a palindrome!!!");
+            System.out.println("The word " + TEXT_TO_VALIDATE + " is a palindrome!!!");
         else
-            System.out.println("The word " + textToValidate + " is NOT a palindrome!!!");
+            System.out.println("The word " + TEXT_TO_VALIDATE + " is NOT a palindrome!!!");
 
     }
 }
