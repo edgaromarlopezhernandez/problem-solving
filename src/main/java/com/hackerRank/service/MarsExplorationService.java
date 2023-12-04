@@ -1,16 +1,11 @@
 package com.hackerRank.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
 public class MarsExplorationService {
-    @Autowired
-    private ConfigurableEnvironment environment;
     /**
      * A space explorer's ship crashed on Mars! They send a series of SOS messages to Earth for help.
      * Letters in some of the SOS messages are altered by cosmic radiation during transmission. Given the signal received by Earth as a string, s, determine how many letters of the SOS message have been changed by radiation.
@@ -75,10 +70,5 @@ public class MarsExplorationService {
         log.info("Message received by earth: " + SIGNAL_RECEIVED_BY_EARTH);
         log.info("RESULT\n");
         log.info("Difference: " + difference);
-    }
-
-    private boolean isRunningInDebbug(ConfigurableEnvironment environment, String property) {
-        String value = environment.getProperty(property);
-        return (value != null && !value.equals("false"));
     }
 }

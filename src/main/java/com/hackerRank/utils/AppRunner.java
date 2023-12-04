@@ -2,6 +2,7 @@ package com.hackerRank.utils;
 
 import com.hackerRank.service.MarsExplorationService;
 import com.hackerRank.service.PalindromeService;
+import com.hackerRank.service.StringSubsequenceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -14,11 +15,15 @@ public class AppRunner implements CommandLineRunner {
     private PalindromeService palindromeService;
     @Autowired
     private MarsExplorationService marsExplorationService;
+
+    @Autowired
+    private StringSubsequenceService stringSubsequenceService;
     @Override
     public void run(String... args) throws Exception {
         log.info("App started...");
 
         //palindromeService.verifyPalindrome();
-        marsExplorationService.verifySignalReceivedByEarth();
+        //marsExplorationService.verifySignalReceivedByEarth();
+        stringSubsequenceService.verify();
     }
 }
