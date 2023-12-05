@@ -37,10 +37,10 @@ public class CountStringOccurrences {
      * Return
      * Integer results[0,...,n] - an array of results for each query
      */
-    public final String[] strings = {"ab", "ab", "abc"};
-    public final String[] queries = {"ab", "abc", "bc"};
+    private final String[] strings = {"ab", "ab", "abc"};
+    private final String[] queries = {"ab", "abc", "bc"};
 
-    public void matchingStringsFirstSolution() {
+    public void matchingStringsWorstSolution() {
         //Create array results
         Integer[] results = new Integer[queries.length];
         //Double loop to strings and queries to verify occurrences
@@ -60,7 +60,7 @@ public class CountStringOccurrences {
         log.info("Results:       " + Arrays.toString(results));
     }
 
-    public void matchingStringsSecondSolution() {
+    public void matchingStringsBestSolution() {
         //Create array results
         Integer[] results = new Integer[queries.length];
         Map<String, Integer> occurrences = new HashMap<>();

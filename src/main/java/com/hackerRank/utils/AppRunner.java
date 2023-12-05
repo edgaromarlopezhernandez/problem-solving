@@ -1,9 +1,6 @@
 package com.hackerRank.utils;
 
-import com.hackerRank.service.CountStringOccurrences;
-import com.hackerRank.service.MarsExplorationService;
-import com.hackerRank.service.PalindromeService;
-import com.hackerRank.service.StringSubsequenceService;
+import com.hackerRank.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -20,6 +17,8 @@ public class AppRunner implements CommandLineRunner {
     private StringSubsequenceService stringSubsequenceService;
     @Autowired
     private CountStringOccurrences countStringOccurrences;
+    @Autowired
+    private PangramsService pangramsService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -29,6 +28,7 @@ public class AppRunner implements CommandLineRunner {
         //marsExplorationService.verifySignalReceivedByEarth();
         //stringSubsequenceService.verify();
         //countStringOccurrences.matchingStringsFirstSolution();
-        countStringOccurrences.matchingStringsSecondSolution();
+        //countStringOccurrences.matchingStringsBestSolution();
+        pangramsService.isPangram();
     }
 }
