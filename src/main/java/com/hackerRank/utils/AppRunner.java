@@ -1,5 +1,6 @@
 package com.hackerRank.utils;
 
+import com.hackerRank.service.CountStringOccurrences;
 import com.hackerRank.service.MarsExplorationService;
 import com.hackerRank.service.PalindromeService;
 import com.hackerRank.service.StringSubsequenceService;
@@ -15,15 +16,19 @@ public class AppRunner implements CommandLineRunner {
     private PalindromeService palindromeService;
     @Autowired
     private MarsExplorationService marsExplorationService;
-
     @Autowired
     private StringSubsequenceService stringSubsequenceService;
+    @Autowired
+    private CountStringOccurrences countStringOccurrences;
+
     @Override
     public void run(String... args) throws Exception {
         log.info("App started...");
 
         //palindromeService.verifyPalindrome();
         //marsExplorationService.verifySignalReceivedByEarth();
-        stringSubsequenceService.verify();
+        //stringSubsequenceService.verify();
+        //countStringOccurrences.matchingStringsFirstSolution();
+        countStringOccurrences.matchingStringsSecondSolution();
     }
 }
