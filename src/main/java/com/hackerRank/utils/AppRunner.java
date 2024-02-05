@@ -20,6 +20,9 @@ public class AppRunner implements CommandLineRunner {
     @Autowired
     private PangramsService pangramsService;
 
+    @Autowired
+    private ElectronicsShopService electronicsShopService;
+
     @Override
     public void run(String... args) throws Exception {
         log.info("App started...");
@@ -29,6 +32,7 @@ public class AppRunner implements CommandLineRunner {
         //stringSubsequenceService.verify();
         //countStringOccurrences.matchingStringsFirstSolution();
         //countStringOccurrences.matchingStringsBestSolution();
-        pangramsService.isPangram();
+        //pangramsService.isPangram();
+        electronicsShopService.getMoneySpent();
     }
 }
