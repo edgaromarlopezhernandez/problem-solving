@@ -125,7 +125,6 @@ public class ElectronicsShopService {
                         maxBudgetToSpend = sum;
                         keyboardIndexToBuy = i;
                         usbDriveIndexToBuy = j;
-
                     }
                 }
             }

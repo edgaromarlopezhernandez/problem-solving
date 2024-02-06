@@ -23,6 +23,9 @@ public class AppRunner implements CommandLineRunner {
     @Autowired
     private ElectronicsShopService electronicsShopService;
 
+    @Autowired
+    private CatsAndAMouseService catsAndAMouseService;
+
     @Override
     public void run(String... args) throws Exception {
         log.info("App started...");
@@ -33,6 +36,7 @@ public class AppRunner implements CommandLineRunner {
         //countStringOccurrences.matchingStringsFirstSolution();
         //countStringOccurrences.matchingStringsBestSolution();
         //pangramsService.isPangram();
-        electronicsShopService.getMoneySpent();
+        //electronicsShopService.getMoneySpent();
+        catsAndAMouseService.catAndMouse();
     }
 }
