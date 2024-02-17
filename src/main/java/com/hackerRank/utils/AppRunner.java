@@ -26,6 +26,9 @@ public class AppRunner implements CommandLineRunner {
     @Autowired
     private CatsAndAMouseService catsAndAMouseService;
 
+    @Autowired
+    private AlgoExpertService algoExpertService;
+
     @Override
     public void run(String... args) throws Exception {
         log.info("App started...");
@@ -37,6 +40,11 @@ public class AppRunner implements CommandLineRunner {
         //countStringOccurrences.matchingStringsBestSolution();
         //pangramsService.isPangram();
         //electronicsShopService.getMoneySpent();
-        catsAndAMouseService.catAndMouse();
+        //catsAndAMouseService.catAndMouse();
+        //algoExpertService.twoNumberSumWorstSolution(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
+        //algoExpertService.twoNumberSumOptimalSolution(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
+        //algoExpertService.twoNumberSumSolution2(new int[] {5, 3, -1, -4, 8, 11, 1, -1, 6, 3, -1, 5 }, 10);
+        algoExpertService.twoNumberSumSolution2(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
+
     }
 }
