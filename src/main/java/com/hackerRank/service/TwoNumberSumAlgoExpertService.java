@@ -7,7 +7,7 @@ import java.util.*;
 
 @Service
 @Slf4j
-public class AlgoExpertService {
+public class TwoNumberSumAlgoExpertService {
 
     /**
      *
@@ -22,7 +22,7 @@ public class AlgoExpertService {
      *
      * You can assume that there will be at most one pair of numbers summing up to the target sum.
      *
-     * try this out in AppRunner: algoExpertService.twoNumberSum(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
+     * Try this out in AppRunner: algoExpertService.twoNumberSum(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
      *
      */
     public int[] twoNumberSumWorstSolution(int[] array, int targetSum) {
@@ -100,7 +100,7 @@ public class AlgoExpertService {
                 }
             } else {
                 if(theMap.containsValue(targetSum - array[i])) {
-                    log.info("Result else: ");
+                    log.info("Result: ");
                     log.info(targetSum - array[i] + " : " + array[i]);
                     return new int[] {targetSum - array[i], array[i]};
                 }

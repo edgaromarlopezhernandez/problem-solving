@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 @Slf4j
 public class AppRunner implements CommandLineRunner {
@@ -27,7 +30,10 @@ public class AppRunner implements CommandLineRunner {
     private CatsAndAMouseService catsAndAMouseService;
 
     @Autowired
-    private AlgoExpertService algoExpertService;
+    private TwoNumberSumAlgoExpertService twoNumberSumAlgoExpertService;
+
+    @Autowired
+    private IsValidSubsequenceAlgoExpertService isValidSubsequenceAlgoExpertService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -44,7 +50,49 @@ public class AppRunner implements CommandLineRunner {
         //algoExpertService.twoNumberSumWorstSolution(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
         //algoExpertService.twoNumberSumOptimalSolution(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
         //algoExpertService.twoNumberSumSolution2(new int[] {5, 3, -1, -4, 8, 11, 1, -1, 6, 3, -1, 5 }, 10);
-        algoExpertService.twoNumberSumSolution2(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
-
+        //algoExpertService.twoNumberSumSolution2(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
+        /*List<String> myList = Arrays.asList("HolA", "EdgaR", "Omar", "Lopez", "Hernandez", "Mariel", "Bonifacio", "Arellano");
+        System.out.println("**********************************");
+        System.out.println(myList);
+        List<String> newList = myList.stream()
+                .filter(value -> value.contains("a"))
+                .map(x -> x.substring(0, 1).toUpperCase() + x.substring(1).toLowerCase())
+                .collect(Collectors.toList());
+        System.out.println(newList);*/
+       /* List<Integer> array = new ArrayList<>();
+        array.add(5);
+        array.add(1);
+        array.add(22);
+        array.add(25);
+        array.add(6);
+        array.add(-1);
+        array.add(8);
+        array.add(10);
+        List<Integer> sequence = new ArrayList<>();
+        sequence.add(1);
+        sequence.add(6);
+        sequence.add(-1);
+        sequence.add(10);*/
+        List<Integer> array = new ArrayList<>();
+        array.add(5);
+        array.add(1);
+        array.add(22);
+        array.add(25);
+        array.add(6);
+        array.add(-1);
+        array.add(8);
+        array.add(10);
+        List<Integer> sequence = new ArrayList<>();
+        sequence.add(5);
+        sequence.add(1);
+        sequence.add(22);
+        sequence.add(22);
+        sequence.add(25);
+        sequence.add(6);
+        sequence.add(-1);
+        sequence.add(8);
+        sequence.add(10);
+        System.out.println("****************************");
+        isValidSubsequenceAlgoExpertService.isValidSubsequenceWithSubsequenceDuplicates(array, sequence);
     }
 }
