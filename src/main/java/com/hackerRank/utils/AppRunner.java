@@ -35,6 +35,9 @@ public class AppRunner implements CommandLineRunner {
     @Autowired
     private IsValidSubsequenceAlgoExpertService isValidSubsequenceAlgoExpertService;
 
+    @Autowired
+    private VisaCompanyChallengeService visaCompanyChallengeService;
+
     @Override
     public void run(String... args) throws Exception {
         log.info("App started...");
@@ -73,7 +76,7 @@ public class AppRunner implements CommandLineRunner {
         sequence.add(6);
         sequence.add(-1);
         sequence.add(10);*/
-        List<Integer> array = new ArrayList<>();
+       /* List<Integer> array = new ArrayList<>();
         array.add(5);
         array.add(1);
         array.add(22);
@@ -93,6 +96,10 @@ public class AppRunner implements CommandLineRunner {
         sequence.add(8);
         sequence.add(10);
         System.out.println("****************************");
-        isValidSubsequenceAlgoExpertService.isValidSubsequenceWithSubsequenceDuplicates(array, sequence);
+        isValidSubsequenceAlgoExpertService.isValidSubsequenceWithSubsequenceDuplicates(array, sequence);*/
+
+
+        //visaCompanyChallengeService.operationSuffix("4 2 *");
+        visaCompanyChallengeService.operationSuffix("5 10 55 25 + * -");
     }
 }

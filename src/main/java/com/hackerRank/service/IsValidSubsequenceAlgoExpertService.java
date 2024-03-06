@@ -52,10 +52,10 @@ public class IsValidSubsequenceAlgoExpertService {
         boolean result = false;
         int index = 0;
         int sequenceIndex = 0;
-        int lastSequenceElement = array.get(0);
+        int lastSequenceElement = -3000;
         while(index < sequence.size()){
             while(sequenceIndex < array.size()) {
-                if(sequence.get(index) == lastSequenceElement) {
+                if(sequence.get(index) == lastSequenceElement && (index + 1) < sequence.size()) {
                     index += 1;
                 }
                 if(sequence.get(index) == array.get(sequenceIndex)) {
