@@ -22,21 +22,20 @@ public class AppRunner implements CommandLineRunner {
     private CountStringOccurrences countStringOccurrences;
     @Autowired
     private PangramsService pangramsService;
-
     @Autowired
     private ElectronicsShopService electronicsShopService;
-
     @Autowired
     private CatsAndAMouseService catsAndAMouseService;
-
     @Autowired
     private TwoNumberSumAlgoExpertService twoNumberSumAlgoExpertService;
-
     @Autowired
     private IsValidSubsequenceAlgoExpertService isValidSubsequenceAlgoExpertService;
-
     @Autowired
     private VisaCompanyChallengeService visaCompanyChallengeService;
+    /*@Autowired
+    private EighthQueensChallengeService eighthQueensChallengeService;*/
+    @Autowired
+    private TournamentWinnerChallengeAEService tournamentWinnerChallengeAEService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -100,6 +99,32 @@ public class AppRunner implements CommandLineRunner {
 
 
         //visaCompanyChallengeService.operationSuffix("4 2 *");
-        visaCompanyChallengeService.operationSuffix("5 10 55 25 + * -");
+        //visaCompanyChallengeService.operationSuffix("5 10 55 25 + * -");
+
+
+        //eighthQueensChallengeService.eightQueens(new String[] {"(1,3)", "(2,8)", "(3,4)", "(4,7)", "(5,1)", "(6,6)", "(7,2)", "(8,5)"});
+
+
+        ArrayList<ArrayList<String>> competitions = new ArrayList<>();
+        competitions.add(0, new ArrayList<>(
+                List.of("HTML",
+                        "C#")
+        ) );
+        competitions.add(1, new ArrayList<>(
+                List.of("C#",
+                        "Python")
+        ) );
+        competitions.add(2, new ArrayList<>(
+                List.of("Python",
+                        "HTML")
+        ) );
+
+        ArrayList<Integer> results = new ArrayList<>(
+                List.of(0,
+                        0,
+                        1)
+        );
+        tournamentWinnerChallengeAEService.tournamentWinner(competitions, results);
+
     }
 }

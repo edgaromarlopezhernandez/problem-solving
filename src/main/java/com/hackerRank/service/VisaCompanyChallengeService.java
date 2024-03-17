@@ -3,6 +3,8 @@ package com.hackerRank.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+
 @Slf4j
 @Service
 public class VisaCompanyChallengeService {
@@ -87,5 +89,16 @@ public class VisaCompanyChallengeService {
         } catch (NumberFormatException e) {
             return false;
         }
+    }
+
+    public Double[] sortedSquaredArray(int[] array) {
+        // Write your code here.
+        Double[] resultArray = new Double[array.length];
+        for(int i = 0; i < array.length; i ++) {
+            Double numberPow = Math.pow(array[i], 2);
+            resultArray[i] = numberPow;
+        }
+        Arrays.sort(resultArray);
+        return resultArray;
     }
 }
